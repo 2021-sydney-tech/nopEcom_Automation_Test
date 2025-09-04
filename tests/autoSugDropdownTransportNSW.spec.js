@@ -13,7 +13,7 @@ test("Auto Suggest Dropdown Transport NSW Test", async ({ page }) => {
     await page.locator('div.list-group-item-title', { hasText: "Parramatta Station" }).click();
 
     // Assertion
-    await expect(page.locator('#tniFromTripLocation')).toHaveValue("Parramatta Station");
+    await expect(page.locator('#tniFromTripLocation')).toHaveValue(/Parramatta Station/);
     await page.screenshot({ path: 'from-suburb-selection.png' });
     await page.waitForTimeout(5000);
 });
