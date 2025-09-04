@@ -21,6 +21,6 @@ test("Assertions Test", async ({page}) => {
     await expect(emailInput).toBeVisible();
     await emailInput.fill('test@demo.com');
     await expect(emailInput).toHaveValue('test@demo.com');
-
+    
 
 });
